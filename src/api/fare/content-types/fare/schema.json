@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fares",
+  "info": {
+    "singularName": "fare",
+    "pluralName": "fares",
+    "displayName": "Fare",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "country": {
+      "type": "string",
+      "required": true,
+      "default": "Indonesia"
+    },
+    "fromCity": {
+      "type": "string",
+      "required": true
+    },
+    "fromAddress": {
+      "type": "text",
+      "required": true
+    },
+    "toCity": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "toAddress": {
+      "type": "text",
+      "required": true
+    },
+    "price": {
+      "type": "integer"
+    }
+  }
+}

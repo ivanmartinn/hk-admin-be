@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "singularName": "client",
+    "pluralName": "clients",
+    "displayName": "Client",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "companyName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "string"
+    },
+    "fareList": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::fare.fare"
+    }
+  }
+}
